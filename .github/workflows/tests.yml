@@ -13,13 +13,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Extract branch name
-        run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: ~1.17
+          go-version: ^1.16
 
       - name: Check out code
         uses: actions/checkout@v3
@@ -48,9 +45,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Extract branch name
-        run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
