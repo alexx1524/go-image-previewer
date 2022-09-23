@@ -1,9 +1,10 @@
-name: Otus homework tests
+name: Otus project tests
 
 on:
   push:
     branches:
       - main
+      - 'features/**'
 
 env:
   GO111MODULE: "on"
