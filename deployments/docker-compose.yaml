@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  image-previewer:
+    container_name: image-previewer
+    restart: always
+    build:
+      context: ../
+      dockerfile: ./build/image_previewer.dockerfile
+    ports:
+      - "8080:80"
+networks:
+  default:
+    name: image_previewer_network
