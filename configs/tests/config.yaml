@@ -1,0 +1,17 @@
+HttpServer:
+  Address: "localhost"
+  Port: 1234
+  ReadHeaderTimeout: 10
+
+Storage:
+  ImagesPath: "images"
+
+Log:
+  LogFile: "log.txt"
+  Level: "debug"
+
+Cache:
+  Mode: "LRUCache"
+  
+  LRUCache: 
+    ItemsCount: 1000
